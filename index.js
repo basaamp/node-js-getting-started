@@ -6,12 +6,12 @@ express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
-app.get('/process_get', function (req, res) {
+app.post('/process_post', urlencodedParser, function (req, res) {
 
    // Prepare output in JSON format
    response = {
-       first_name:req.query.first_name,
-       last_name:req.query.last_name
+       first_name:req.body.first_name,
+       last_name:req.body.last_name
    };
    console.log(response);
    res.end(JSON.stringify(response));
