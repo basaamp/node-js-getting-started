@@ -1,5 +1,10 @@
 const express = require('express')
 const path = require('path')
+var bodyParser = require('body-parser');
+
+// Create application/x-www-form-urlencoded parser
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
+
 const PORT = process.env.PORT || 5000
 var app = express();
 express()
