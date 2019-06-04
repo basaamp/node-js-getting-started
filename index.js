@@ -9,7 +9,7 @@ express()
 
 
 app.get('/', function (req, res) {
-   res.send(req);
+   res.send('j[nkiu');
 })
 
   /*.get('/', (req, res) => res.render('pages/index'))*/
