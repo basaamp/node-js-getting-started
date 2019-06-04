@@ -19,7 +19,9 @@ app.post('/process_post', urlencodedParser, function (req, res) {
        last_name:req.body.last_name
    };
    console.log(response);
-   res.end(JSON.stringify(response));
+   //res.end(JSON.stringify(response));
+const respos = req;
+res.end(respos + 22 + 22)
 })
 /*
 app.get('/', function (req, res) {
