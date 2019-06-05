@@ -13,11 +13,9 @@ express()
   .set('view engine', 'ejs')
 
 app.get('/', function (req, res) {
-    var remoteAddress = req.headers['x-forwarded-for'] || 
-    				  req.connection.remoteAddress;
-    res.json({ "ipAddress": remoteAddress });
-});
-/*
+   res.send('ujjii');
+})
+
 app.post('/process_post', urlencodedParser, function (req, res) {
 
    // Prepare output in JSON format
@@ -26,15 +24,13 @@ app.post('/process_post', urlencodedParser, function (req, res) {
        last_name:req.body.last_name
    };
    console.log(response);
-   //res.end(JSON.stringify(response));
-const respos = req;
-res.end(respos + 22 + 22)
+   res.end(JSON.stringify(response));
+//const respos = req;
+//res.end(respos + 22 + 22)
 })
-*/
-/*
-app.get('/', function (req, res) {
-   res.send('ujjii');
-})
-*/
+
+
+
+
   /*.get('/', (req, res) => res.render('pages/index'))*/
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
