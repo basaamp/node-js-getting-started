@@ -1,10 +1,11 @@
 const express = require('express')
 const path = require('path')
-var bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 
 // Create application/x-www-form-urlencoded parser
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
+//var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
+app.use(bodyParser.urlencoded({extended: false}));
 const PORT = process.env.PORT || 5000
 var app = express();
 express()
@@ -24,10 +25,10 @@ app.post('/process_post', urlencodedParser, function (req, res) {
        last_name:req.body.last_name
    };
    console.log(response);
-   //res.end(JSON.stringify(response));
+   res.end(JSON.stringify(response));
    
-   res.end(JSON.stringify(req.body));
-   res.end(req);
+  // res.end(JSON.stringify(req.body));
+ //  res.end(req);
 //const respos = req;
 
 })
