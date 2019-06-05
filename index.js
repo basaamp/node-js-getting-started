@@ -26,7 +26,7 @@ app.post('/process_post', urlencodedParser, function (req, res) {
    console.log(response);
    //res.end(JSON.stringify(response));
    
-   res.end(req.body);
+   res.end(JSON.stringify(req.body));
    res.end(req);
 //const respos = req;
 
