@@ -26,7 +26,8 @@
   "keywords": [
     "node",
     "heroku",
-    "express"
+    "express",
+    "body-parser"
   ],
   "license": "MIT"
 }
