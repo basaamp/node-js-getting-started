@@ -11,6 +11,13 @@ express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
+
+app.get('/', function (req, res) {
+    var remoteAddress = req.headers['x-forwarded-for'] || 
+    				  req.connection.remoteAddress;
+    res.json({ "ipAddress": remoteAddress });
+});
+/*
 app.post('/process_post', urlencodedParser, function (req, res) {
 
    // Prepare output in JSON format
@@ -23,6 +30,7 @@ app.post('/process_post', urlencodedParser, function (req, res) {
 const respos = req;
 res.end(respos + 22 + 22)
 })
+*/
 /*
 app.get('/', function (req, res) {
    res.send('ujjii');
