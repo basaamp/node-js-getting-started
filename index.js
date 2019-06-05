@@ -17,7 +17,7 @@ app.get('/', function (req, res) {
 })
 
 app.post('/process_post', urlencodedParser, function (req, res) {
-
+/*
    // Prepare output in JSON format
    response = {
        first_name:req.body.first_name,
@@ -26,7 +26,8 @@ app.post('/process_post', urlencodedParser, function (req, res) {
    console.log(response);
    res.end(JSON.stringify(response));
 //const respos = req;
-//res.end(respos + 22 + 22)
+*/
+res.end('lelelel')
 })
 
 
