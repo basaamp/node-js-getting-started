@@ -19,7 +19,7 @@ var jsonParser = bodyParser.json()
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 
-app.post('/login', urlencodedParser, function (req, res) {
+app.post('/login', jsonParser, function (req, res) {
  res.send('welcome, ' + req.body.username);
 req.end();
 })
