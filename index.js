@@ -13,7 +13,7 @@ express()
   .set('view engine', 'ejs')
 
 app.get('/', function (req, res) {
-   res.send('ujjii');
+   res.send('ujjihhjkjggi');
 })
 
 app.post('/process_post', urlencodedParser, function (req, res) {
@@ -26,8 +26,8 @@ app.post('/process_post', urlencodedParser, function (req, res) {
    console.log(response);
    //res.end(JSON.stringify(response));
    
-   res.end(JSON.stringify(req.body));
-   res.end(req);
+   res.end(JSON.stringify(req.body)+'hdjdjs');
+   //res.end(req);
 //const respos = req;
 
 })
