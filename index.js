@@ -16,8 +16,14 @@ app.use(function(req, res, next) {
 var jsonParser = bodyParser.json()
 
 // create application/x-www-form-urlencoded parser
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
+
+app.post('/login', urlencodedParser, function (req, res) {
+ res.send('welcome, ' + req.body.username);
+req.end();
+})
+/*
 // POST /login gets urlencoded bodies
 app.post('/login', urlencodedParser, function (req, res) {
   res.send('welcome, ' + JSON.stringify(req.body.username))
@@ -27,5 +33,5 @@ app.post('/login', urlencodedParser, function (req, res) {
 app.post('/api/users', jsonParser, function (req, res) {
   // create user in req.body
 })
-
+*/
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
