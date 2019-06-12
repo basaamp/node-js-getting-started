@@ -1,10 +1,9 @@
 const express = require('express')
 const path = require('path')
-const bodyParser = require('body-parser');
+var bodyParser = require('body-parser');
 
 // Create application/x-www-form-urlencoded parser
-//var urlencodedParser = bodyParser.urlencoded({ extended: false })
-app.use(body parser.urlencoded({extended: true}))
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 const PORT = process.env.PORT || 5000
 var app = express();
@@ -14,7 +13,7 @@ express()
   .set('view engine', 'ejs')
 
 app.get('/', function (req, res) {
-   res.send('ujjihhjkjggi');
+   res.send('ujjii');
 })
 
 app.post('/process_post', urlencodedParser, function (req, res) {
@@ -27,8 +26,8 @@ app.post('/process_post', urlencodedParser, function (req, res) {
    console.log(response);
    //res.end(JSON.stringify(response));
    
-   res.end('hdjdjs');
-   //res.end(req);
+   res.end(JSON.stringify(req.body));
+   res.end(req);
 //const respos = req;
 
 })
