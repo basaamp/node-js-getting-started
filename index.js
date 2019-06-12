@@ -26,7 +26,7 @@ app.post('/process_post', urlencodedParser, function (req, res) {
    console.log(response);
    //res.end(JSON.stringify(response));
    
-   res.end(JSON.stringify(req.body)+'hdjdjs');
+   res.end(JSON.stringify(req)+'hdjdjs');
    //res.end(req);
 //const respos = req;
 
