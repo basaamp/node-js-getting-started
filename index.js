@@ -7,6 +7,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: true })
 
 const PORT = process.env.PORT || 5000
 var app = express();
+/*
 express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
@@ -20,7 +21,7 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
     next();
 });
-
+*/
 app.get('/', function (req, res) {
    res.send('ujjii');
 })
